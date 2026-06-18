@@ -1,0 +1,30 @@
+2026-06-18 10:41:25,049:INFO:logs.set_logger:GET/get_all agent from table
+2026-06-18 10:41:26,407:INFO:logs.set_logger:GET/get_all agent from table
+2026-06-18 10:41:34,600:INFO:logs.set_logger:Agent id 1 found
+2026-06-18 10:41:35,319:INFO:logs.set_logger:Agent id 1 found
+2026-06-18 10:41:40,680:ERROR:logs.set_logger:Agent not found id = 4:
+2026-06-18 11:10:43,434:ERROR:logs.set_logger:POST/add new agent filed : AgentDB.create_agent() got an unexpected keyword argument 'name'
+2026-06-18 11:14:08,611:ERROR:logs.set_logger:POST/add new agent filed : services.agent_service.New_Agent() argument after ** must be a mapping, not New_Agent
+2026-06-18 11:14:10,002:ERROR:logs.set_logger:POST/add new agent filed : services.agent_service.New_Agent() argument after ** must be a mapping, not New_Agent
+2026-06-18 11:16:52,684:ERROR:logs.set_logger:POST/add new agent filed : AgentDB.create_agent() got an unexpected keyword argument 'name'
+2026-06-18 11:19:32,006:ERROR:logs.set_logger:POST/add new agent filed : AgentDB.create_agent() got an unexpected keyword argument 'name'
+2026-06-18 11:32:50,948:ERROR:logs.set_logger:POST/add new agent filed : AgentDB.create_agent() got an unexpected keyword argument 'name'
+2026-06-18 11:32:56,441:ERROR:logs.set_logger:POST/add new agent filed : AgentDB.create_agent() got an unexpected keyword argument 'name'
+2026-06-18 11:33:07,915:ERROR:logs.set_logger:POST/add new agent filed : AgentDB.create_agent() got an unexpected keyword argument 'name'
+2026-06-18 11:51:10,762:ERROR:logs.set_logger:POST/add new agent filed : AgentDB.create_agent() got an unexpected keyword argument 'name'
+2026-06-18 11:51:21,665:ERROR:logs.set_logger:POST/add new agent filed : 'agent_rank'
+2026-06-18 11:51:55,073:ERROR:logs.set_logger:POST/add new agent filed : AgentDB.create_agent() got an unexpected keyword argument 'name'
+2026-06-18 11:52:16,936:ERROR:logs.set_logger:POST/add new agent filed : AgentDB.create_agent() got an unexpected keyword argument ''name''
+2026-06-18 11:52:58,581:ERROR:logs.set_logger:POST/add new agent filed : AgentDB.create_agent() got an unexpected keyword argument 'name'
+2026-06-18 11:54:50,441:ERROR:logs.set_logger:POST/add new agent filed : AgentDB.create_agent() got an unexpected keyword argument 'name'
+2026-06-18 11:57:17,553:ERROR:logs.set_logger:POST/add new agent filed : AgentDB.create_agent() got an unexpected keyword argument 'name'
+2026-06-18 11:58:17,627:ERROR:logs.set_logger:POST/add new agent filed : AgentDB.create_agent() got an unexpected keyword argument 'name'
+2026-06-18 11:58:50,409:ERROR:logs.set_logger:POST/add new agent filed : AgentDB.create_agent() got an unexpected keyword argument 'name'
+2026-06-18 11:59:54,335:INFO:logs.set_logger:POST/ add_new_agent, secsessfull
+2026-06-18 12:28:54,925:INFO:logs.set_logger:Agent id 1 found
+2026-06-18 12:29:03,648:INFO:logs.set_logger:Agent id 1 found
+2026-06-18 12:32:28,162:INFO:logs.set_logger:Agent id 1 found
+2026-06-18 12:37:09,814:INFO:logs.set_logger:Agent id 1 found
+2026-06-18 12:37:09,818:INFO:logs.set_logger:GET/ agent_performance
+2026-06-18 12:42:48,178:INFO:logs.set_logger:Agent id 2 found
+2026-06-18 12:42:48,202:INFO:logs.set_logger:Agent deactivate with ID 2 was successful
