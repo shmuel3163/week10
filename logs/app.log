@@ -28,3 +28,6 @@
 2026-06-18 12:37:09,818:INFO:logs.set_logger:GET/ agent_performance
 2026-06-18 12:42:48,178:INFO:logs.set_logger:Agent id 2 found
 2026-06-18 12:42:48,202:INFO:logs.set_logger:Agent deactivate with ID 2 was successful
+2026-06-18 14:53:52,565:INFO:logs.set_logger:GET/get_all agent from table
+2026-06-18 15:20:53,899:INFO:logs.set_logger:GET/get_all missins from table
+2026-06-18 15:21:02,618:ERROR:logs.set_logger:Mission not found id = 2:

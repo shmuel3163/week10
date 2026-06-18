@@ -1,12 +1,44 @@
-from db_connection import db
+from database.db_connection import db
 
 
 class Mission_db:
     def __init__(self):
         self.conn = db.get_connection()
 
+    def add_risk_level(self, data):
+        risk = int(data["difficulty"]) * 2 + int(data["importance"])
+        if risk < 10:
+            return {"risk_level": "LOW"}
+        elif risk < 18:
+            return {"risk_level": "MEDIUM"}
+        elif risk < 25:
+            return {"risk_level": "HIGH"}
+        else:
+            return {"risk_level": "CRITICAL"}
+
     def create_mission(self, data):
-        pass
+        cur = self.conn.cursor()
+        culc_risk = self.add_risk_level(data)
+        data = data.update(culc_risk)
+        str_to_exe = (
+            "INSERT INTO missions(title, description, location,"
+            " difficulty, importance, risk_level) VALUES (%s, %s, %s, %s, %s, %s)"
+        )
+        values_to_exe = (
+            str(data["title"]),
+            str(data["description"]),
+            str(data["location"]),
+            int(data["difficulty"]),
+            int(data["importance"]),
+            str(data["risk_level"]),
+        )
+
+        print(values_to_exe)
+        cur.execute(str_to_exe, values_to_exe)
+        new_mission_id = cur.lastrowid
+        self.conn.commit()
+        cur.close()
+        return self.get_mission_by_id(new_mission_id)
 
     def get_all_missions(self):
         cur = self.conn.cursor()
@@ -46,12 +78,7 @@ class Mission_db:
         result_of_exc = cur.rowcount
         self.conn.commit()
         cur.close()
-
-        if result_of_exc == 0:
-            return {"massage :": f'update mission {id} with status :{status}  failed'}
-        else:
-            return {
-                "massage :": f'update mission {id} with status :{status} success'}
+        return result_of_exc
 
     def get_open_missions_by_agent(self, id):
         cur = self.conn.cursor()
@@ -85,7 +112,7 @@ class Mission_db:
         num_of_open_missions = cur.fetchone()
         cur.close()
         return num_of_open_missions
-    
+
     def count_critical_missions(self):
         cur = self.conn.cursor()
         str_to_exe = "select COUNT(*) FROM missions where difficulty ='critical'"
@@ -95,6 +122,7 @@ class Mission_db:
         return num_of_critical_missions
 
     def get_top_agent(self):
-        pass 
-        
-        
+        pass
+
+
+mission = Mission_db()
